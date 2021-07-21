@@ -8,26 +8,26 @@ In this recitation, you will implement several clients of the List data structur
 
 1. Download the provided code by forking and cloning this [Recitation 10
 repository](https://github.com/2217-cs445/cs445-rec10). The starting code for
-this exercise, as usual, is found in subdirectory `app/src/main/java/`. Navigate
-to this subdirectory, then into the `cs445/rec10/` package folder within it. 
+this exercise, as usual, is found in subdirectory `app/src/main/java/`. 
 
-The following java files are provided:
+   The following java files are provided under the path `app/src/main/java/cs445/list`:
 
-if navigate to this path 'app/src/main/java/cs445/rec10' , you'll find the following:
+   - `ListInterface.java` contains the list ADT
+   - `ArrayList.java` contains an array-based implementation of the ADT list, using a resizable array.
 
-   - 'ListInterface.java' contains the list ADT
-   - 'ArrayList' contains methods for implement the ADT list, using a resizable array.
-   - 'Demo.java' contains a client for testing printList method and commented lines (31- 57) to run 		                                	removeShortStrings and findMode.
-   - 'IterableUtils.java' contains the methods, which we will have to write, to iterate over any collection and 		access its elements using ONLY iterators.
-   
-then, go to 'app/src/test/java/cs445/rec10' , you'll find the following:
-   -'IteratorTest.java' contains unit tests to check if removeShortStrings and findMode work properly. 
+   The following java files are provided under the path `app/src/main/java/cs445/rec10`:
 
-2. In class `IterableUtils` within the `cs445.rec10` package, write the generic method `static <T> void printList(Iterable<T> collection)`, which prints the contents of any `Iterable` collection. You should rely entirely on iterators; do not cast the collection or otherwise try to use the List's `.get()` method. Test that your method works properly.
+   - `Demo.java` contains a client for testing printList method and commented lines (31- 57) to run 		                                	removeShortStrings and findMode.
+   - `IterableUtils.java` contains the methods, which we will have to write, to iterate over any collection and 		access its elements using ONLY iterators.
+
+   The following java files are provided under the path `app/src/test/java/cs445/rec10/test`:
+   - `IteratorTest.java` contains unit tests to check if removeShortStrings and findMode work properly. 
+
+2. In the class `IterableUtils`, within the `cs445.rec10` package, write the generic method `static <T> void printList(Iterable<T> collection)`, which prints the contents of any `Iterable` collection. You should rely entirely on iterators; do not cast the collection or otherwise try to use the List's `.get()` method. Test that your method works properly.
 
 3. Check if your printList method works using './gradlew run', which will run Demo.java. 
 
-	Note: Demo.java has lines 31- 57 commented. You can uncomment these lines once you write the 		other 2 methods (removeShortStrings and findMode.)
+	Note: Demo.java has lines 31- 57 commented. You can uncomment these lines once you write the other 2 methods (removeShortStrings and findMode.)
 
 4. In the same class `ListUtils`, write the method `static void removeShortStrings(Iterable<String> collection, int limit)`, which removes all strings shorter than `limit`. Again, rely only on iterators for element access, and test that your method works. Do not attempt to use the List's `.get()` or `.remove(int)` methods.
 
