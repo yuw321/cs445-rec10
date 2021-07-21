@@ -6,10 +6,9 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import cs445.list.ArrayList;
+import cs445.list.ListInterface;
 import cs445.rec10.IterableUtils;
 
 
@@ -21,10 +20,10 @@ import cs445.rec10.IterableUtils;
  */
 public class IteratorTest {
 
-    ArrayList<String> stringList;
-    ArrayList<Integer> numList;
-    // each string's length is the same as its index 
-    // index starts from 1; string 1.length = 1, string 2.length = 2
+    ListInterface<String> stringList;
+    ListInterface<Integer> numList;
+
+    // each string's length is the same as its position, starting from 1
     final String[] testStrings = {"1", "22", "333", "4444", "55555", "666666", "7777777"};
 
     @BeforeEach
@@ -42,27 +41,21 @@ public class IteratorTest {
     @Test
     @DisplayName("Test removeShortStrings")
     void testRemoveShortStrings() {
-
         for (String str : testStrings) {
             stringList.add(str);
         }
-
         IterableUtils.removeShortStrings(stringList, 3);
-        assertEquals(5, stringList.getSize(), "removeShortStrings method is not working properly"); 
-
+        assertEquals(5, stringList.getSize(), "removeShortStrings method is not working properly");
     }
 
     @Test
     @DisplayName("Test findMode")
     void testFindMode() {
-
         for (String str : testStrings) {
             stringList.add(str);
         }
         stringList.add("1");
-
         assertEquals(IterableUtils.findMode(stringList), "1", "find mode method doesn't work for a list of strings");
-
 
         numList.add(14);
         numList.add(123);
@@ -81,8 +74,6 @@ public class IteratorTest {
         numList.add(35);
 
         assertEquals(IterableUtils.findMode(numList), 41, "find mode method doesn't work for a list of strings");
-
-
-}
+    }
 }
 
