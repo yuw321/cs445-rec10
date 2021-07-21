@@ -5,7 +5,7 @@ import java.util.Iterator;
 public class IterableUtils {
 
     /**
-     * prints a list of enteries (of any type: T),
+     * prints a list of entries (of any type: T),
      * using the traversal behaviour 
      * of the Iterator pattern
      * @param collection: the list to be printed

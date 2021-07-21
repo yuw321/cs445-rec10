@@ -1,4 +1,4 @@
-package cs445.rec10;
+package cs445.list;
 
 import java.util.Arrays;
 import java.util.Iterator;

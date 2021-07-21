@@ -1,4 +1,4 @@
-package cs445.rec10;
+package cs445.list;
 
 /**
  * An interface for the ADT list.

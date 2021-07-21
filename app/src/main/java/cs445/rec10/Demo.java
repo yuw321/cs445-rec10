@@ -2,7 +2,7 @@ package cs445.rec10;
 
 import java.util.Iterator;
 
-import cs445.rec10.ArrayList;
+import cs445.list.*;
 import cs445.rec10.IterableUtils;
 
 public class Demo {
